@@ -8,7 +8,7 @@ public class Department implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
-	
+
 	public Department() {
 	}
 
@@ -42,9 +42,7 @@ public class Department implements Serializable {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if (obj == null || getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
 		return Objects.equals(id, other.id);
